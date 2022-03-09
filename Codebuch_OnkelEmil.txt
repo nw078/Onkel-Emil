@@ -1,0 +1,123 @@
+﻿# Datensatz Widerstandsgruppe Onkel Emil #
+Codebuch Stand 2022-01
+erstellt von Anika Geiger, Hanna Bekele, Theresa Fürst,  Nina Walter , Berenice Fengler (bf032@hdm-stuttgart.de)
+
+
+## Inhalt
+- Edges.csv (Edgelist)
+- Nodes.csv (Nodelist)
+- Codebuch.md (Codierung der Datensätze)
+
+
+## Ursprung und Datenerhebung
+Wir haben den Datensatz aus Benz, Wolfgang. (2020). Protest und Menschlichkeit. Die Widerstandsgruppe “Onkel Emil” im Nationalsozialismus. Reclam. 
+
+
+Das Netzwerk ist ein *ungerichtetes two-mode Akteursnetzwerk*.
+  
+
+
+# EDGE-Attribute
+
+
+**id**  
+(eindeutige Codierung des Knoten)   
+codiert von 1 bis ca. 30/35, jede ID entspricht einem Gruppenmitglied oder einer Aktion
+
+
+**relationship**
+Beziehungsart zwischen den Personen  
+ 1 = *Liebesbeziehung* Liebesbeziehung zwischen den Akteuren  
+ 2 = *Verwandtschaft* Diese Akteure sind miteinander verwandt
+
+
+**time_relationship**
+Zeitpunkt der Beziehung
+
+
+**function**
+Beziehung Person zu Aktion
+1 = Lebensmittel besorgen
+2 = Unterkunft stellen
+3 = Papiere besorgen
+4 = Krankschreibungen/ Arbeitsunfähigkeitsbescheinigungen
+5 = Informationen beschaffen
+6 = Hilfe bei Flucht
+7 = Geldbeschaffung
+
+
+
+
+
+
+**type_action**
+Um welche Art von Aktion handelt es sich?
+1 = Hilfe für Juden
+2 = aktiver Protest gegen das System
+
+
+**year_action**
+In welchem Jahr war die Aktion?
+
+
+# NODE-Attribute  
+  
+**id**  
+numerische ID
+
+
+**name**
+Name
+
+
+**first_name**
+Vorname
+
+
+**type**
+0 = Person
+1 = Aktion
+
+
+**sex**    
+Geschlecht:  
+1 = weiblich  
+2 = männlich 
+
+
+**year_birth**
+Jahr der Geburt
+
+
+**year_death**
+Jahr des Todeszeitpunkts 
+
+
+**profession** 
+Welcher Berufsgruppe hat er/sie angehört?
+1 = Recht (Jurist)
+2 = Medien/Druck (Journalist, Drucker, Grafiker)
+3 = Kunsthandwerk (Dirigent, Musiker, Schauspieler)
+4 = Bildung (Studienrat, Gesandtschaftsrat)
+5 = Gesundheitswesen (Arzt)
+6 = Soziales & Religion  (Pfarrer)
+7 = Ernährung/Handel (Konditor)
+8 = Militär
+9 = Anderes
+
+
+**membership**
+Ist der-/diejenige Mitglied oder nur Unterstützer der Gruppe?
+1 = Mitglied
+2 = Unterstützer
+
+
+**joining**  
+Wann ist er/sie der Gruppe beigetreten?  -> über relationship codieren -> edge attribute
+
+
+**leaving**
+Wann hat er/sie die Gruppe verlassen?
+
+
+##
